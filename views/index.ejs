@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+
+<body>
+
+<% if (locals.title && locals.review) { %>
+  <h1> <%= title %> </h1> 
+  <p><%= review %> </p> 
+<% } else { %>
+  <h1>Hey, I saw that movie too!</h1>
+<% } %>
+
+
+<form action="/blogs" method="POST">
+    <input type="text" name="movieName" placeholder="Movie Name:">
+    <input type="text" name="yourThoughts" placeholder="Your Thoughts!">
+    <input type="submit" value="Blog It">
+</form>
+
+<!-- Step 3 Add Footer -->
+<%- include("partials/footer.ejs") %>
+
+</body>

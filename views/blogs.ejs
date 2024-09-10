@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+    <h1>Your Thoughts</h1>
+    <h2> <%= title %> </h2>
+     <p>
+        <%= review %> 
+    </p>
+
+    <form action="/blogs" method="GET">
+        <input type="text" name="movieName" placeholder="Movie Name:">
+        <input type="text" name="yourThoughts" placeholder="Your Thoughts!">
+        <input type="submit" value="Blog It">
+    </form>
+<%- include("partials/footer.ejs") %>
